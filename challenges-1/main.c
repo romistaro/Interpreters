@@ -108,7 +108,7 @@ node* find(List* list, char* name)
 	node* node = list ->phead;
 	while(node != NULL)
 	{
-		if (node -> name = name){
+		if (node -> name == name){
 			return node;
 		}
 		node = node->next;
@@ -140,6 +140,7 @@ bool delete(List* list, char* name)
 	free(node);
 	return true;
 }
+
 int main(){
 	List* list = newlist("a");
 	char* name = list -> phead -> name;
